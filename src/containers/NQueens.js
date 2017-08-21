@@ -12,12 +12,27 @@ export default class NQueens extends Component {
 
   state = {
     boardSize: 8,
-    currentCol: 0,
-    currentRow: 0
+    currentCol: 5,
+    currentRow: 0,
+    rowPositions: []
   };
 
+  componentWillMount = () => {
+    this.getRowPositions()
+  }
+
+  getRowPositions = () => {
+    let rowPositions = []
+
+    for (let i=0; i<this.state.boardSize; i++) {
+      rowPositions.push(0)
+    }
+
+    this.setState({rowPositions})
+  }
+
   render() {
-    const {boardSize, currentRow, currentCol} = this.state
+    const {boardSize, currentRow, currentCol, rowPositions} = this.state
 
     return (
       <Board
@@ -26,6 +41,7 @@ export default class NQueens extends Component {
         boardSize={boardSize}
         currentCol={currentCol}
         currentRow={currentRow}
+        rowPositions={rowPositions}
       />
     );
   }
