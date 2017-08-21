@@ -5,12 +5,12 @@ import ReactSVG from 'react-svg'
 export default class Queen extends Component {
 
   render() {
-    const { queenId } = this.props
-    
+    const { col, currentCol, currentRow } = this.props
+
     return (
       <div
-        className="queen"
-        id={`n-queens_queen--${queenId}`}
+        className={`queen ${col <= currentCol && 'u-hidden'}`}
+        id={`n-queens_queen--${col}`}
       >
         <div
           className="queen__img u-center-both">
