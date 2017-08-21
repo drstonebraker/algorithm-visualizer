@@ -21,7 +21,10 @@ export default class BoardRow extends Component {
     }
 
     return (
-      <div className="board__row cf">
+      <div
+        className="board__row cf"
+        id={`n-queens_board__row--${rowIndex}`}
+      >
         { spaces }
       </div>
     );

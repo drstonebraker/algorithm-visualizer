@@ -6,8 +6,10 @@ export default class BoardSpace extends Component {
     const { boardSize, rowIndex, colIndex } = this.props
 
     return (
-      <div className="board__space">
-        
+      <div
+        className="board__space"
+        id={`n-queens_board__space--${rowIndex}-${colIndex}`}
+      >
       </div>
     );
   }

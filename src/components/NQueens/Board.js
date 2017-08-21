@@ -23,10 +23,13 @@ export default class Board extends Component {
     }
 
     return (
-      <div className="board u-center-both">
+      <div
+        className="board u-center-both"
+        id={`n-queens_board`}
+      >
         <Queen
-          id={`queen--0`}
           boardSize={boardSize}
+          queenId="1"
         />
         { rows }
       </div>

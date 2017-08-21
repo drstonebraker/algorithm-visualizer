@@ -11,15 +11,21 @@ import '../styles/NQueens/n-queens.css';
 export default class NQueens extends Component {
 
   state = {
-    boardSize: 8
+    boardSize: 8,
+    currentCol: 0,
+    currentRow: 0
   };
 
   render() {
-    const {boardSize} = this.state
+    const {boardSize, currentRow, currentCol} = this.state
 
     return (
       <Board
+        className="board u-center-both"
+        id="n-queens--board"
         boardSize={boardSize}
+        currentCol={currentCol}
+        currentRow={currentRow}
       />
     );
   }
