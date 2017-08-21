@@ -10,6 +10,17 @@
   width: 100%;
 }
 
+.board__row--invalid {
+  position: absolute;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  )
+}
+
 .board__space {
   float: left;
   height: 100%;
