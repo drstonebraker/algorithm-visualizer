@@ -5,11 +5,12 @@ import ReactSVG from 'react-svg'
 export default class Queen extends Component {
 
   render() {
-    const { col, currentCol, currentRow, boardWidth } = this.props
+    const { col, currentCol, currentRow, boardWidth, rowPosition } = this.props
     const spaceWidth = boardWidth / 8
     const translateXVal = spaceWidth * col
+    const translateYVal = spaceWidth * rowPosition
     let styles = {
-      'transform': `translate(${translateXVal}px, 0px)`
+      'transform': `translate(${translateXVal}px, ${translateYVal}px)`
     }
 
     return (
